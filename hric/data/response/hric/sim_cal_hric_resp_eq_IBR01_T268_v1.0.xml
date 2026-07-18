@@ -52,38 +52,43 @@
         <!-- File Information                                               -->
         <!-- ============================================================== -->
         <File>
-            <file_name>sim_cal_vihi_cosm_dead_v1.0.dat</file_name>
-            <creation_date_time>2018-05-03</creation_date_time>
-            <file_size unit="byte">131072</file_size>
+            <file_name>sim_cal_hric_resp_eq_IBR01_T268_v1.0.dat</file_name>
+            <creation_date_time>2018-04-03</creation_date_time>
+            <file_size unit="byte">33554432</file_size>
             <records>256</records>
-            <md5_checksum>0dfbe8aa4c20b52e1b8bf3cb6cbdf193</md5_checksum>
+            <md5_checksum>558193dfe6b0895027ed59a02c3ec431</md5_checksum>
         </File>
-        <Array_2D>
-            <local_identifier>VIHI_DEAD_Pixel_Map</local_identifier>
+        <Array_3D>
+            <local_identifier>HRIC_DN_EQUALIZATION</local_identifier>
             <offset unit="byte">0</offset>
-            <axes>2</axes>
+            <axes>3</axes>
             <axis_index_order>Last Index Fastest</axis_index_order>
             <encoding_type>Binary</encoding_type>
-            <description>Dead Pixel mask for SIMBIO-SYS VIHI channel</description>
+            <description>DN Equalization for SIMBIO-SYS HRIC channel at 268 K and compressed with IBR 1</description>
             <Element_Array>
-                <data_type>UnsignedLSB2</data_type>
-                <unit/>
+                <data_type>IEEE754MSBSingle</data_type>
+                <unit>N/A</unit>
                 <scaling_factor>0</scaling_factor>
                 <value_offset>0</value_offset>
             </Element_Array>
 
             <Axis_Array>
                 <axis_name>Line</axis_name>
-                <elements>265</elements>
+                <elements>2048</elements>
                 <sequence_number>1</sequence_number>
             </Axis_Array>
 
             <Axis_Array>
                 <axis_name>Sample</axis_name>
-                <elements>256</elements>
+                <elements>2048</elements>
                 <sequence_number>2</sequence_number>
             </Axis_Array>
-        </Array_2D>
+            <Axis_Array>
+                <axis_name>Band</axis_name>
+                <elements>2</elements>
+                <sequence_number>3</sequence_number>
+            </Axis_Array>
+        </Array_3D>
 
 
 

@@ -20,9 +20,9 @@
     <Identification_Area>
 
         <!-- PDS4 rules/recommendation for logical_identifier naming conventions TBD -->
-        <logical_identifier>urn:esa:psa:bc_mpo_simbio-sys:data_raw:sim_hk_hric_raw_template</logical_identifier>
+        <logical_identifier>urn:esa:psa:bc_mpo_simbio-sys:calibration:sim_cal_stc_resp_eq_T263_IBR01_v1.0</logical_identifier>
         <version_id>1.0</version_id>
-        <title>BEPICOLOMBO MPO SIMBIO-SYS MERCURY ORBIT HRIC HOUSEKEEPING DATA PRODUCT</title>
+        <title>BEPICOLOMBO MPO SIMBIO-SYS STC CALIBRATION FILE: ITF FOR IBR 1 and T 263</title>
         <information_model_version>1.8.0.0</information_model_version>
         <product_class>Product_Ancillary</product_class>
 
@@ -39,7 +39,7 @@
                 <modification_date>2016-12-15</modification_date>
                 <version_id>1.0</version_id>
                 <description>
-                    Preliminary version of PDS4 label for SIMBIO-SYS HRIC housekeeping data
+                    Preliminary version of PDS4 label for SIMBIO-SYS STC housekeeping data
                 </description>
             </Modification_Detail>
         </Modification_History>
@@ -52,38 +52,38 @@
         <!-- File Information                                               -->
         <!-- ============================================================== -->
         <File>
-            <file_name>sim_cal_vihi_cosm_dead_v1.0.dat</file_name>
-            <creation_date_time>2018-05-03</creation_date_time>
-            <file_size unit="byte">131072</file_size>
+            <file_name>sim_cal_stc_resp_eq_T263_IBR01_v1.0.dat</file_name>
+            <creation_date_time>2026-07-18</creation_date_time>
+            <file_size unit="byte">16777216</file_size>
             <records>256</records>
-            <md5_checksum>0dfbe8aa4c20b52e1b8bf3cb6cbdf193</md5_checksum>
+            <md5_checksum>2c7ab85a893283e98c931e9511add182</md5_checksum>
         </File>
         <Array_2D>
-            <local_identifier>VIHI_DEAD_Pixel_Map</local_identifier>
+            <local_identifier>STC_DN_EQUALIZATION</local_identifier>
             <offset unit="byte">0</offset>
-            <axes>2</axes>
+            <axes>3</axes>
             <axis_index_order>Last Index Fastest</axis_index_order>
             <encoding_type>Binary</encoding_type>
-            <description>Dead Pixel mask for SIMBIO-SYS VIHI channel</description>
+            <description>DN Equalization for SIMBIO-SYS STC channel at 263 K and compressed with IBR 1</description>
             <Element_Array>
-                <data_type>UnsignedLSB2</data_type>
-                <unit/>
+                <data_type>IEEE754MSBSingle</data_type>
+                <unit>N/A</unit>
                 <scaling_factor>0</scaling_factor>
                 <value_offset>0</value_offset>
             </Element_Array>
 
             <Axis_Array>
                 <axis_name>Line</axis_name>
-                <elements>265</elements>
+                <elements>2048</elements>
                 <sequence_number>1</sequence_number>
             </Axis_Array>
 
             <Axis_Array>
                 <axis_name>Sample</axis_name>
-                <elements>256</elements>
+                <elements>2048</elements>
                 <sequence_number>2</sequence_number>
             </Axis_Array>
-        </Array_2D>
+        </Array_3D>
 
 
 

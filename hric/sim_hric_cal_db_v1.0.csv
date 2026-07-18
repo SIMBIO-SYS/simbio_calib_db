@@ -1,0 +1,2 @@
+Description,Channel,Calibration_Step,Size,Mask,Type,Func,Start,End,File
+Instrument Transfer Function,HRIC,itf,2048-2048,0,float32,None,2018-10-18,Now,data/response/hric/sim_cal_hric_resp_eq_IBR01_T268_v1.0.dat

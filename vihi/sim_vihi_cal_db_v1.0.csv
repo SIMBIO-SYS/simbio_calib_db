@@ -2,5 +2,3 @@ Description,Channel,Calibration_Step,Size,Mask,Type,Func,Start,End,File
 Instrument Transfer Function,VIHI,itf,256-256,0,float64,None,2018-10-18,Now,data/response/vihi/sim_cal_vihi_resp_itf_v1.0.dat
 Bad Pixels,VIHI,badpix,256-256,0,bool,None,2018-10-18,Now,data/cosmetic/vihi/sim_cal_vihi_cosm_bad_v1.0.dat
 Dead Pixels,VIHI,deadpix,256-256,0,bool,None,2018-10-18,Now,data/cosmetic/vihi/sim_cal_vihi_cosm_dead_v1.0.dat
-Instrument Transfer Function,STC,itf,2048-2048,0,float32,None,2018-10-18,Now,data/response/stc/sim_cal_stc_resp_eq_T263_IBR01_v1.0.dat
-Instrument Transfer Function,HRIC,itf,2048-2048,0,float32,None,2018-10-18,Now,data/response/hric/sim_cal_hric_resp_eq_IBR01_T268_v1.0.dat

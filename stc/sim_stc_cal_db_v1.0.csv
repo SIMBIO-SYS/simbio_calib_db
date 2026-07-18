@@ -1,0 +1,2 @@
+Description,Channel,Calibration_Step,Size,Mask,Type,Func,Start,End,File
+Instrument Transfer Function,STC,itf,2048-2048,0,float32,None,2018-10-18,Now,data/response/stc/sim_cal_stc_resp_eq_T263_IBR01_v1.0.dat
