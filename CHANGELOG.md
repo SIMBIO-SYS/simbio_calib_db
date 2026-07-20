@@ -5,6 +5,11 @@ this file.
 
 ## Unreleased
 
+### Documentation
+
+- Record that the Calibrator-wide SPICE kernel folder and `MetakernelInfo`
+  integration does not change database indexes, manifests, or payload paths.
+
 ## Version 1.2 - 2026-07-20
 
 ### Changed

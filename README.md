@@ -39,6 +39,10 @@ This convention is shared by `CalibDBReader`, `simCal`, `stcCal`, `hricCal`,
 and `vihiCal`. The historical root-level combined index remains for
 compatibility, but new configuration points at an instrument subdirectory.
 
+SPICE kernels are intentionally not stored or indexed here. The Calibrator
+runtime supplies them through `folders.kernels` and `MetakernelInfo`; this
+database remains limited to instrument calibration records and payloads.
+
 Binary `.dat` payloads are stored with Git LFS. Install Git LFS before cloning
 or updating the repository so the calibration matrices are materialized:
 

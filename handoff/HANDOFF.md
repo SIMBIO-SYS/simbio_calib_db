@@ -21,6 +21,10 @@ It contains metadata, the CSV index, and the files consumed by
   a clone without Git LFS contains pointer text rather than calibration data.
 - `version.yml` is obsolete and has been removed.
 
+SPICE kernels remain outside this repository. The runtime kernel folder and
+`MetakernelInfo` introduced in the Calibrator software do not require index or
+manifest changes here.
+
 ## Current indexed records
 
 The three instrument CSV files contain five records in total:
