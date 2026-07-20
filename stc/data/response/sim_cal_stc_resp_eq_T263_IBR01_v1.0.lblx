@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1800.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<pds:Product_Ancillary
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1800.xsd">
+
+    <pds:Identification_Area>
+
+        <!-- PDS4 rules/recommendation for logical_identifier naming conventions TBD -->
+        <pds:logical_identifier>
+            urn:esa:psa:bc_mpo_simbio-sys:calibration:sim_cal_stc_resp_eq_T263_IBR01_v1.0</pds:logical_identifier>
+        <pds:version_id>1.0</pds:version_id>
+        <pds:title>BEPICOLOMBO MPO SIMBIO-SYS STC CALIBRATION FILE: ITF FOR IBR 1 and T 263</pds:title>
+        <pds:information_model_version>1.22.0.0</pds:information_model_version>
+        <pds:product_class>Product_Ancillary</pds:product_class>
+
+    <pds:Modification_History>
+        <pds:Modification_Detail>
+            <pds:modification_date>2016-12-15</pds:modification_date>
+            <pds:version_id>1.0</pds:version_id>
+            <pds:description>
+                Preliminary version of PDS4 label for SIMBIO-SYS STC calibration data
+            </pds:description>
+        </pds:Modification_Detail>
+    </pds:Modification_History>
+
+    </pds:Identification_Area>
+
+    <pds:File_Area_Ancillary>
+
+        <!-- ============================================================== -->
+        <!-- File Information                                               -->
+        <!-- ============================================================== -->
+        <pds:File>
+            <pds:file_name>sim_cal_stc_resp_eq_T263_IBR01_v1.0.dat</pds:file_name>
+            <pds:creation_date_time>2026-07-18</pds:creation_date_time>
+            <pds:file_size unit="byte">16777216</pds:file_size>
+            <pds:records>256</pds:records>
+            <pds:md5_checksum>ed0cf323a3fd9b62d304ce0c72c611b0</pds:md5_checksum>
+        </pds:File>
+        <pds:Array_2D_Image>
+            <pds:name>dn_equalization</pds:name>
+            <pds:local_identifier>STC_DN_EQUALIZATION</pds:local_identifier>
+            <pds:offset unit="byte">0</pds:offset>
+            <pds:axes>2</pds:axes>
+            <pds:axis_index_order>Last Index Fastest</pds:axis_index_order>
+            <pds:description>DN Equalization for SIMBIO-SYS STC channel at 263 K and compressed with
+                IBR 1</pds:description>
+
+            <pds:Element_Array>
+                <pds:data_type>IEEE754MSBSingle</pds:data_type>
+                <pds:unit>dimensionless</pds:unit>
+            </pds:Element_Array>
+
+            <pds:Axis_Array>
+                <pds:axis_name>Line</pds:axis_name>
+                <pds:elements>2048</pds:elements>
+                <pds:sequence_number>1</pds:sequence_number>
+            </pds:Axis_Array>
+
+            <pds:Axis_Array>
+                <pds:axis_name>Sample</pds:axis_name>
+                <pds:elements>2048</pds:elements>
+                <pds:sequence_number>2</pds:sequence_number>
+            </pds:Axis_Array>
+        </pds:Array_2D_Image>
+
+
+    </pds:File_Area_Ancillary>
+</pds:Product_Ancillary>
