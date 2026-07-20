@@ -3,6 +3,8 @@
 This repository contains the calibration database for the SIMBIO-SYS suite on
 board ESA's BepiColombo mission.
 
+Current database version: `1.2`.
+
 The repository now exposes one database root per instrument:
 
 ```text
@@ -51,7 +53,7 @@ git lfs pull
 ```json
 {
   "instrument": "SIMBIO-SYS",
-  "version": "1.1"
+  "version": "1.2"
 }
 ```
 

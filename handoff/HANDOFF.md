@@ -1,6 +1,8 @@
 # SIMBIO-SYS calibration database handoff
 
-Updated: 2026-07-18
+Updated: 2026-07-20
+
+Current database version: `1.2`.
 
 ## Repository role
 
@@ -10,7 +12,7 @@ It contains metadata, the CSV index, and the files consumed by
 
 ## Current contract
 
-- `manifest.json` contains `instrument: SIMBIO-SYS` and `version: 1.1`.
+- Root and instrument `manifest.json` files contain version `1.2`.
 - Active database roots are `hric/`, `stc/`, and `vihi/`.
 - Each root contains `manifest.json`, `data/`, and a
   `sim_<instrument>_cal_db_v1.0.csv` index.
@@ -40,6 +42,10 @@ uv run calibDB version ../simbio_calib_db/stc
 uv run calibDB dbdisplay \
   ../simbio_calib_db/stc/sim_stc_cal_db_v1.0.csv --check
 ```
+
+Current verification: all three indexes resolve their referenced files, all
+four manifests report version `1.2`, the corrected STC label parses, Git LFS
+passes `fsck`, and the STC payload is a 2048 × 2048 `float32` matrix.
 
 ## Next work
 
