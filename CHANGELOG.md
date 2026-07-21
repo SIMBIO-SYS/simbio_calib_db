@@ -5,6 +5,23 @@ this file.
 
 ## Unreleased
 
+### Changed
+
+- Move the active HRIC response product out of the duplicated
+  `data/response/hric/` directory and update its CSV reference.
+- Replace the obsolete HRIC XML label with a PDS4 `.lblx` ancillary label
+  whose core elements use explicit `pds:` prefixes.
+- Replace the former 32 MiB two-plane HRIC payload with a 2048 × 2048
+  float32 response matrix of 16 MiB.
+- Add channel metadata and prepare the HRIC and STC manifests for database
+  version `2.0`, release `2026-07-31`.
+
+### Verified
+
+- The HRIC payload MD5 is `2c7ab85a893283e98c931e9511add182`.
+- The HRIC label is well-formed XML and describes the payload as a two-axis
+  ancillary image with dimensionless values.
+
 ### Documentation
 
 - Record that the Calibrator-wide SPICE kernel folder and `MetakernelInfo`

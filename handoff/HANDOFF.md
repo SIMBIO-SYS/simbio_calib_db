@@ -1,8 +1,9 @@
 # SIMBIO-SYS calibration database handoff
 
-Updated: 2026-07-20
+Updated: 2026-07-21
 
-Current database version: `1.2`.
+Root/VIHI database version: `1.2`. HRIC/STC channel manifests are prepared as
+version `2.0` for release `2026-07-31`.
 
 ## Repository role
 
@@ -12,7 +13,8 @@ It contains metadata, the CSV index, and the files consumed by
 
 ## Current contract
 
-- Root and instrument `manifest.json` files contain version `1.2`.
+- Root and VIHI `manifest.json` files contain version `1.2`; HRIC and STC
+  contain channel-specific version `2.0` metadata.
 - Active database roots are `hric/`, `stc/`, and `vihi/`.
 - Each root contains `manifest.json`, `data/`, and a
   `sim_<instrument>_cal_db_v1.0.csv` index.
@@ -34,8 +36,10 @@ The three instrument CSV files contain five records in total:
 - one STC instrument-transfer-function matrix;
 - one HRIC instrument-transfer-function matrix.
 
-All five referenced files currently exist. The STC transfer-function payload
-is a 16 MiB raw float32 matrix with shape `2048 x 2048`.
+All five referenced files currently exist. The STC and active HRIC
+transfer-function payloads are 16 MiB raw float32 matrices with shape
+`2048 x 2048`. The HRIC CSV now points directly below `data/response/`; its
+`.lblx` label uses explicit `pds:` prefixes and replaces the obsolete XML.
 
 ## Verification
 

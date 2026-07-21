@@ -3,7 +3,8 @@
 This repository contains the calibration database for the SIMBIO-SYS suite on
 board ESA's BepiColombo mission.
 
-Current database version: `1.2`.
+The root and VIHI manifests are version `1.2`; the HRIC and STC channel
+manifests are prepared as version `2.0` with release date `2026-07-31`.
 
 The repository now exposes one database root per instrument:
 
@@ -35,6 +36,11 @@ directory. They include the `data/` prefix, for example:
 data/response/stc/sim_cal_stc_resp_eq_T263_IBR01_v1.0.dat
 ```
 
+The active HRIC response is
+`data/response/sim_cal_hric_resp_eq_IBR01_T268_v1.0.dat`: a 2048 × 2048
+little-endian float32 matrix (16 MiB) with a namespaced PDS4 ancillary
+`.lblx` label. The former duplicated `data/response/hric/` level is obsolete.
+
 This convention is shared by `CalibDBReader`, `simCal`, `stcCal`, `hricCal`,
 and `vihiCal`. The historical root-level combined index remains for
 compatibility, but new configuration points at an instrument subdirectory.
@@ -62,6 +68,7 @@ git lfs pull
 ```
 
 The previous `version.yml` metadata file has been replaced by `manifest.json`.
+Instrument manifests may additionally declare `channel` and `release`.
 
 ## Validation
 

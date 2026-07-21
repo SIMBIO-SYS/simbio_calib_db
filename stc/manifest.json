@@ -1,4 +1,6 @@
 {
   "instrument": "SIMBIO-SYS",
-  "version": "1.2"
+  "channel": "STC",
+  "version": "2.0",
+  "release": "2026-07-31"
 }
