@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1800.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<pds:Product_Ancillary 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xsi:schemaLocation="
+    http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1800.xsd">
+
+    <pds:Identification_Area>
+
+        <!-- PDS4 rules/recommendation for logical_identifier naming conventions TBD -->
+        <pds:logical_identifier>urn:esa:psa:bc_mpo_simbio-sys:data_raw:sim_hk_hric_raw_template</pds:logical_identifier>
+        <pds:version_id>1.0</pds:version_id>
+        <pds:title>BEPICOLOMBO MPO SIMBIO-SYS MERCURY ORBIT HRIC HOUSEKEEPING DATA PRODUCT</pds:title>
+        <pds:information_model_version>1.8.0.0</pds:information_model_version>
+        <pds:product_class>Product_Ancillary</pds:product_class>
+
+        <pds:Citation_Information>
+            <pds:author_list>$AUTHOR_LIST</pds:author_list>
+            <pds:editor_list>$EDITOR_LIST</pds:editor_list>
+            <pds:publication_year>2017</pds:publication_year>
+            <pds:keyword>$KEYWORD</pds:keyword>
+            <pds:description>$CITATION_DESCRIPTION</pds:description>
+        </pds:Citation_Information>
+
+        <pds:Modification_History>
+            <pds:Modification_Detail>
+                <pds:modification_date>2016-12-15</pds:modification_date>
+                <pds:version_id>1.0</pds:version_id>
+                <pds:description>
+                    Preliminary version of PDS4 label for SIMBIO-SYS HRIC housekeeping data
+                </pds:description>
+            </pds:Modification_Detail>
+        </pds:Modification_History>
+
+    </pds:Identification_Area>
+
+    <pds:File_Area_Ancillary>
+
+        <!-- ============================================================== -->
+        <!-- File Information                                               -->
+        <!-- ============================================================== -->
+        <pds:File>
+            <pds:file_name>sim_cal_vihi_cosm_dead_v1.0.dat</pds:file_name>
+            <pds:creation_date_time>2018-05-03</pds:creation_date_time>
+            <pds:file_size unit="byte">131072</pds:file_size>
+            <pds:records>256</pds:records>
+            <pds:md5_checksum>0dfbe8aa4c20b52e1b8bf3cb6cbdf193</pds:md5_checksum>
+        </pds:File>
+        <pds:Array_2D>
+            <pds:local_identifier>VIHI_DEAD_Pixel_Map</pds:local_identifier>
+            <pds:offset unit="byte">0</pds:offset>
+            <pds:axes>2</pds:axes>
+            <pds:axis_index_order>Last Index Fastest</pds:axis_index_order>
+            
+            <pds:description>Dead Pixel mask for SIMBIO-SYS VIHI channel</pds:description>
+            <pds:Element_Array>
+                <pds:data_type>UnsignedLSB2</pds:data_type>
+                <pds:unit>boolean</pds:unit>
+                <pds:scaling_factor>0</pds:scaling_factor>
+                <pds:value_offset>0</pds:value_offset>
+            </pds:Element_Array>
+
+            <pds:Axis_Array>
+                <pds:axis_name>Line</pds:axis_name>
+                <pds:elements>265</pds:elements>
+                <pds:sequence_number>1</pds:sequence_number>
+            </pds:Axis_Array>
+
+            <pds:Axis_Array>
+                <pds:axis_name>Sample</pds:axis_name>
+                <pds:elements>256</pds:elements>
+                <pds:sequence_number>2</pds:sequence_number>
+            </pds:Axis_Array>
+        </pds:Array_2D>
+
+
+
+    </pds:File_Area_Ancillary>
+</pds:Product_Ancillary>

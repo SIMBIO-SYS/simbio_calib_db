@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1800.sch"
+    href="http://pds.nasa.gov/pds4/pds/geom/v1/PDS4_GEOM_1700_1401.sch"
+    href="http://pds.nasa.gov/pds4/pds/v1/PDS4_IMG_1100.sch"
+    href="http://psa.esa.int/psa/v1/PDS4_PSA_1000.sch"
+    href="http://psa.esa.int/psa/v1/PDS4_PSA_BC_1000.sch"
+    href="http://psa.esa.int/psa/bc/sim/v1/PDS4_PSA_BC_SIM_LDD_1000.sch"
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<pds:Product_Observational xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:geom="http://pds.nasa.gov/pds4/geom/v1" xmlns:img="http://pds.nasa.gov/pds4/img/v1"
+    xmlns:psa="http://psa.esa.int/psa/v1" xmlns:simbio="http://psa.esa.int/psa/bc/sim/v1" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+    xsi:schemaLocation="
+    http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1800.xsd
+    http://pds.nasa.gov/pds4/geom/v1 http://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1700_1401.xsd
+    http://psa.esa.int/psa/v1 http://psa.esa.int/psa/v1/PDS4_PSA_LDD_1000.xsd
+    http://psa.esa.int/psa/bc/sim/v1 http://psa.esa.int/psa/bc/sim/v1/PDS4_PSA_BC_SIM_LDD_1000.xsd
+    http://pds.nasa.gov/pds4/img/v1 http://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1100.xsd">
+
+    <pds:Identification_Area>
+
+        <!-- PDS4 rules/recommendation for logical_identifier naming conventions TBD -->
+        <pds:logical_identifier>urn:esa:psa:bc_mpo_simbio-sys:data_raw:sim_hk_hric_raw_template</pds:logical_identifier>
+        <pds:version_id>1.0</pds:version_id>
+        <pds:title>BEPICOLOMBO MPO SIMBIO-SYS MERCURY ORBIT HRIC HOUSEKEEPING DATA PRODUCT</pds:title>
+        <pds:information_model_version>1.8.0.0</pds:information_model_version>
+        <pds:product_class>Product_Ancillary</pds:product_class>
+
+        <pds:Citation_Information>
+            <pds:author_list>$AUTHOR_LIST</pds:author_list>
+            <pds:editor_list>$EDITOR_LIST</pds:editor_list>
+            <pds:publication_year>2017</pds:publication_year>
+            <pds:keyword>$KEYWORD</pds:keyword>
+            <pds:description>$CITATION_DESCRIPTION</pds:description>
+        </pds:Citation_Information>
+
+        <pds:Modification_History>
+            <pds:Modification_Detail>
+                <pds:modification_date>2016-12-15</pds:modification_date>
+                <pds:version_id>1.0</pds:version_id>
+                <pds:description>
+                    Preliminary version of PDS4 label for SIMBIO-SYS HRIC housekeeping data
+                </pds:description>
+            </pds:Modification_Detail>
+        </pds:Modification_History>
+
+    </pds:Identification_Area>
+
+    <pds:File_Area_Ancillary>
+
+        <!-- ============================================================== -->
+        <!-- File Information                                               -->
+        <!-- ============================================================== -->
+        <pds:File>
+            <pds:file_name>sim_cal_vihi_cosm_bad_v1.0.dat</pds:file_name>
+            <pds:creation_date_time>2018-05-03</pds:creation_date_time>
+            <pds:file_size unit="byte">131072</pds:file_size>
+            <pds:records>256</pds:records>
+            <pds:md5_checksum>0dfbe8aa4c20b52e1b8bf3cb6cbdf193</pds:md5_checksum>
+        </pds:File>
+        <pds:Array_2D>
+            <pds:local_identifier>VIHI_Bad_Pixel_Map</pds:local_identifier>
+            <pds:offset unit="byte">0</pds:offset>
+            <pds:axes>2</pds:axes>
+            <pds:axis_index_order>Last Index Fastest</pds:axis_index_order>
+            <pds:encoding_type>Binary</pds:encoding_type>
+            <pds:description>Bad Pixel mask for SIMBIO-SYS VIHI channel</pds:description>
+            <pds:Element_Array>
+                <pds:data_type>UnsignedLSB2</pds:data_type>
+                <pds:unit></pds:unit>
+                <pds:scaling_factor>0</pds:scaling_factor>
+                <pds:value_offset>0</pds:value_offset>
+            </pds:Element_Array>
+
+            <pds:Axis_Array>
+                <pds:axis_name>Line</pds:axis_name>
+                <pds:elements>265</pds:elements>
+                <pds:sequence_number>1</pds:sequence_number>
+            </pds:Axis_Array>
+
+            <pds:Axis_Array>
+                <pds:axis_name>Sample</pds:axis_name>
+                <pds:elements>256</pds:elements>
+                <pds:sequence_number>2</pds:sequence_number>
+            </pds:Axis_Array>
+        </pds:Array_2D>
+
+
+
+    </pds:File_Area_Ancillary>
+</pds:Product_Observational>
