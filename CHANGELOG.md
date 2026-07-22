@@ -15,17 +15,23 @@ this file.
   float32 response matrix of 16 MiB.
 - Add channel metadata and prepare the HRIC and STC manifests for database
   version `2.0`, release `2026-07-31`.
+- Replace the VIHI response payload with a 256 x 256 float32 zero matrix and
+  update its label file size, checksum, and modification date.
+- Prepare the VIHI manifest as version `2.0`, release `2026-07-31`.
 
 ### Verified
 
 - The HRIC payload MD5 is `2c7ab85a893283e98c931e9511add182`.
 - The HRIC label is well-formed XML and describes the payload as a two-axis
   ancillary image with dimensionless values.
+- The VIHI response payload is 262,144 bytes and has MD5
+  `ec87a838931d4d5d2e94a04644788a55`.
 
 ### Documentation
 
 - Record that the Calibrator-wide SPICE kernel folder and `MetakernelInfo`
   integration does not change database indexes, manifests, or payload paths.
+- Record the known VIHI payload/CSV/PDS4 metadata mismatch as `SIMCAL-015`.
 
 ## Version 1.2 - 2026-07-20
 

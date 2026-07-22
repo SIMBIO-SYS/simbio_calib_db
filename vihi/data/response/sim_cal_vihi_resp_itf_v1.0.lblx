@@ -43,12 +43,13 @@
         <!-- ============================================================== -->
         <!-- File Information                                               -->
         <!-- ============================================================== -->
+        <!-- TODO SIMCAL-015: Align array type and dimensions with the payload. -->
         <pds:File>
             <pds:file_name>sim_cal_vihi_resp_itf_v1.0.dat</pds:file_name>
-            <pds:creation_date_time>2016-12-20</pds:creation_date_time>
-            <pds:file_size unit="byte">524288</pds:file_size>
+            <pds:creation_date_time>2026-07-31</pds:creation_date_time>
+            <pds:file_size unit="byte">262144</pds:file_size>
             <pds:records>256</pds:records>
-            <pds:md5_checksum>28ad96db00c5650333307b58759b4ed1</pds:md5_checksum>
+            <pds:md5_checksum>ec87a838931d4d5d2e94a04644788a55</pds:md5_checksum>
         </pds:File>
         <pds:Array_2D>
             <pds:local_identifier>VIHI_ITF</pds:local_identifier>
