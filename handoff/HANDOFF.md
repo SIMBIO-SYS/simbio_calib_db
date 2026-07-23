@@ -1,6 +1,6 @@
 # SIMBIO-SYS calibration database handoff
 
-Updated: 2026-07-22
+Updated: 2026-07-23
 
 Root database version: `1.2`. HRIC, STC, and VIHI channel manifests are
 prepared as version `2.0` for release `2026-07-31`.
@@ -40,9 +40,10 @@ All five referenced files currently exist. The STC and active HRIC
 transfer-function payloads are 16 MiB raw float32 matrices with shape
 `2048 x 2048`. The HRIC CSV now points directly below `data/response/`; its
 `.lblx` label uses explicit `pds:` prefixes and replaces the obsolete XML.
-The VIHI ITF payload is a 256 x 256 float32 zero matrix (262,144 bytes), but
-its CSV and label describe incompatible type/shape metadata. Labelled loading
-therefore fails and is tracked centrally as `SIMCAL-015`.
+The VIHI ITF payload is a 265 × 256 big-endian float64 zero matrix (542,720
+bytes). Its CSV and PDS4 array metadata are aligned, and labelled loading
+succeeds (`SIMCAL-015`). The label Identification Area still contains HRIC
+housekeeping identity metadata; this separate defect is `SIMCAL-018`.
 
 ## Verification
 
@@ -56,15 +57,14 @@ uv run calibDB dbdisplay \
 
 Current verification: all three indexes resolve their referenced files; the
 root manifest reports `1.2` and all channel manifests report `2.0`; the
-corrected STC label parses; and the VIHI payload has MD5
-`ec87a838931d4d5d2e94a04644788a55`. Full VIHI labelled-data validation remains
-blocked by `SIMCAL-015`.
+corrected STC label parses; and the VIHI payload loads as a `(265, 256)`
+big-endian float64 array with MD5 `cd2be5f11c8d422f076328cf81b914eb`.
 
 ## Next work
 
 - Expand the CSV index to cover the available cosmetic, distortion, dark
   current, and response products.
 - Add automated schema and referential-integrity checks to this repository.
-- Align the VIHI ITF CSV and PDS4 metadata with the payload (`SIMCAL-015`).
+- Correct the VIHI ITF identification metadata (`SIMCAL-018`).
 - Remove untracked operating-system metadata and temporary editor artifacts
   from the data tree where safe.

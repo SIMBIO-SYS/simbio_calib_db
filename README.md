@@ -41,11 +41,12 @@ The active HRIC response is
 little-endian float32 matrix (16 MiB) with a namespaced PDS4 ancillary
 `.lblx` label. The former duplicated `data/response/hric/` level is obsolete.
 
-The current VIHI response payload is a 256 x 256 zero matrix stored as
-little-endian float32 (262,144 bytes; MD5
-`ec87a838931d4d5d2e94a04644788a55`). Its CSV and PDS4 metadata still describe
-a different representation, so labelled loading is intentionally documented as
-blocked by `SIMCAL-015` until all three artefacts are aligned.
+The current VIHI response payload is a 265 × 256 zero matrix stored as
+big-endian float64 (542,720 bytes; MD5
+`cd2be5f11c8d422f076328cf81b914eb`). Its CSV and PDS4 array metadata are
+aligned and labelled loading succeeds (`SIMCAL-015`). The label Identification
+Area still carries obsolete HRIC housekeeping identity metadata, tracked as
+`SIMCAL-018`.
 
 This convention is shared by `CalibDBReader`, `simCal`, `stcCal`, `hricCal`,
 and `vihiCal`. The historical root-level combined index remains for
