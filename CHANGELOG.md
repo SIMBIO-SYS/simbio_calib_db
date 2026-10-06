@@ -5,6 +5,20 @@ this file.
 
 ## Unreleased
 
+### Documentation - 2026-10-06
+
+- Refresh the working-tree inventory with companion PDS4 index labels and
+  removal of the historical combined index and duplicated data tree.
+- Document VIHI 256 × 256 boolean masks as raw one-byte-per-pixel arrays,
+  including their size, zero-filled contents and checksum.
+- Correct the documented HRIC byte order to the big-endian type declared by
+  its current label; document STC using the same declared type.
+- Record CSV CRLF endings, ten fields and table offset 73, and identify the
+  VIHI index label record-count mismatch and remaining label inconsistencies.
+- This documentation update does not commit the existing data/index/label
+  working-tree changes or certify scientific validity.
+
+
 ### Changed
 
 - Move the active HRIC response product out of the duplicated
